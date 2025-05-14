@@ -1,0 +1,411 @@
+:root {
+      --ferrari-red: #e10600;
+      --mclaren-orange: #ff8700;
+      --mercedes-teal: #00d2be;
+      --background-dark: #121212;
+      --card-bg: rgba(30, 30, 30, 0.9);
+      --text-light: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--background-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
+                        url('https://images.unsplash.com/photo-1568219656418-15c329312bf1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dashboard-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 100%;
+      flex: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .dashboard {
+        grid-template-columns: 1fr 350px;
+      }
+    }
+
+    .header {
+      grid-column: 1 / -1;
+      padding: 20px 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header img {
+      height: 60px;
+      width: auto;
+    }
+
+    .header h1 {
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      height: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .panel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .panel-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+    }
+
+    .panel-title img {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    /* Estilo aprimorado para o painel de meta mensal */
+    .meta-panel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .meta-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ferrari-red), var(--mclaren-orange), var(--mercedes-teal));
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      padding: 15px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .meta-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .meta-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 10px 0;
+      background: linear-gradient(135deg, var(--mercedes-teal), #ffffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .meta-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .progress-container {
+      margin: 25px 0 15px;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .progress-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .progress-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 5px;
+      transition: width 1s ease;
+      background: linear-gradient(90deg, var(--mercedes-teal), #00ffcc);
+      box-shadow: 0 0 10px rgba(0, 210, 190, 0.5);
+    }
+
+    .progress-comparison {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .team-card {
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: scale(1.03);
+    }
+
+    .team-card.ferrari {
+      border-top: 3px solid var(--ferrari-red);
+    }
+
+    .team-card.mclaren {
+      border-top: 3px solid var(--mclaren-orange);
+    }
+
+    .team-card.mercedes {
+      border-top: 3px solid var(--mercedes-teal);
+    }
+
+    .team-logo {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .team-name {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .team-sales {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 5px 0;
+    }
+
+    .team-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Painel de consultores */
+    .consultants-panel {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 200px);
+      max-height: 900px;
+    }
+
+    .consultants-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .consultants-list-container {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .consultants-list {
+      list-style: none;
+    }
+
+    .consultant-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .consultant-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .consultant-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+      object-fit: cover;
+      border: 2px solid;
+    }
+
+    .ferrari-photo {
+      border-color: var(--ferrari-red);
+    }
+
+    .mclaren-photo {
+      border-color: var(--mclaren-orange);
+    }
+
+    .mercedes-photo {
+      border-color: var(--mercedes-teal);
+    }
+
+    .consultant-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .consultant-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .consultant-stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .consultant-sales {
+      color: var(--text-light);
+    }
+
+    .consultant-projection {
+      color: #ffcc00;
+    }
+
+    .consultant-car {
+      width: 30px;
+      margin-left: 10px;
+      opacity: 0.7;
+      transition: var(--transition);
+    }
+
+    .consultant-item:hover .consultant-car {
+      opacity: 1;
+    }
+
+    /* Barra de rolagem personalizada */
+    .consultants-list-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .consultants-list-container::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 3px;
+    }
+
+    .consultants-list-container::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+    }
+
+    .consultants-list-container::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }

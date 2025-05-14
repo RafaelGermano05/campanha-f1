@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Vendas - F1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard">
+      <header class="header">
+        <div class="header-content">
+          <img src="f1-logo-removebg-preview.png" alt="f1 logo">
+          <h1>Performance de Vendas</h1>
+        </div>
+      </header>
+      
+      <main class="main-content">
+        <section class="panel meta-panel">
+          <h2 class="panel-title">
+            <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="F1" style="height: 20px;">
+            Meta Mensal
+          </h2>
+          
+          <div class="meta-grid">
+            <div class="meta-card">
+              <div class="meta-label">Meta Total</div>
+              <div class="meta-value">1.100</div>
+              <div class="meta-label">Vendas</div>
+            </div>
+            
+            <div class="meta-card">
+              <div class="meta-label">Realizado</div>
+              <div class="meta-value">396</div>
+              <div class="meta-label">Vendas Concluídas</div>
+            </div>
+          </div>
+          
+          <div class="progress-container">
+            <div class="progress-header">
+              <div class="progress-title">Progresso em Relação à Meta</div>
+              <div class="progress-value">36%</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 36%"></div>
+            </div>
+            <div class="progress-comparison">
+              <span>0</span>
+              <span>1.100</span>
+            </div>
+          </div>
+          
+          <div class="progress-container">
+            <div class="progress-header">
+              <div class="progress-title">Projeção do Mês</div>
+              <div class="progress-value">1.040</div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 95%"></div>
+            </div>
+            <div class="progress-comparison">
+              <span>94.5% da meta</span>
+              <span>GAP 60 vendas</span>
+            </div>
+          </div>
+        </section>
+        
+        <section class="panel sales">
+          <h2 class="panel-title">Vendas por Equipe</h2>
+          <div class="teams-grid">
+            <div class="team-card ferrari">
+              <img src="ferrari.jpg" alt="Ferrari" class="team-logo">
+              <div class="team-name">Ferrari</div>
+              <div class="team-sales">4</div>
+              <div class="team-label">Consultores</div>
+            </div>
+            <div class="team-card mclaren">
+              <img src="mcLarenn.jpg" alt="McLaren" class="team-logo">
+              <div class="team-name">McLaren</div>
+              <div class="team-sales">8</div>
+              <div class="team-label">Consultores</div>
+            </div>
+            <div class="team-card mercedes">
+              <img src="mercedes-benz-logo-8.png" alt="Mercedes" class="team-logo">
+              <div class="team-name">Mercedes</div>
+              <div class="team-sales">2</div>
+              <div class="team-label">Consultores</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <aside class="panel consultants-panel">
+        <h2 class="consultants-title">Top Consultores</h2>
+        <div class="consultants-list-container">
+          <ul class="consultants-list">
+            <li class="consultant-item">
+              <img src="Vitor.png" alt="Joana Ferreira" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Vitor Emanoel</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">11 vendas</span>
+                  <span class="consultant-projection">28 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/ferrari.png.transform/1col/image.png" alt="Ferrari">
+            </li>
+            <li class="consultant-item">
+              <img src="PauloRicardo.png" alt="Miguel Pinto" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Paulo Ricardo</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">9 vendas</span>
+                  <span class="consultant-projection">23 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/ferrari.png.transform/1col/image.png" alt="Ferrari">
+            </li>
+            <li class="consultant-item">
+              <img src="Fco-Carlos.png" alt="Sofia Martins" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Francisco Carlos</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">8 vendas</span>
+                  <span class="consultant-projection">21 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/ferrari.png.transform/1col/image.png" alt="Ferrari">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Luís Gonçalves" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Janyelly Vitorino</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">8 vendas</span>
+                  <span class="consultant-projection">21 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/ferrari.png.transform/1col/image.png" alt="Ferrari">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Catarina Neves" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Jose Nunes</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">8 vendas</span>
+                  <span class="consultant-projection">21 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mclaren.png.transform/1col/image.png" alt="McLaren">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Hugo Machado" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Karolyne Alves</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">8 vendas</span>
+                  <span class="consultant-projection">21 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mclaren.png.transform/1col/image.png" alt="McLaren">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Ricardo Alves" class="consultant-photo ferrari-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Ramom Amaral</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">8 vendas</span>
+                  <span class="consultant-projection">21 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mercedes.png.transform/1col/image.png" alt="Mercedes">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Ricardo Alves" class="consultant-photo mclaren-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Carlos Aurélio</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">7 vendas</span>
+                  <span class="consultant-projection">18 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mercedes.png.transform/1col/image.png" alt="Mercedes">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Ricardo Alves" class="consultant-photo mercedes-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Débora Alves</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">7 vendas</span>
+                  <span class="consultant-projection">18 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mercedes.png.transform/1col/image.png" alt="Mercedes">
+            </li>
+            <li class="consultant-item">
+              <img src="pessoas_352279-247.avif" alt="Ricardo Alves" class="consultant-photo mercedes-photo">
+              <div class="consultant-info">
+                <div class="consultant-name">Flávio Palhano</div>
+                <div class="consultant-stats">
+                  <span class="consultant-sales">7 vendas</span>
+                  <span class="consultant-projection">18 proj.</span>
+                </div>
+              </div>
+              <img class="consultant-car" src="https://www.formula1.com/content/dam/fom-website/teams/2023/mercedes.png.transform/1col/image.png" alt="Mercedes">
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
