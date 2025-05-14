@@ -391,7 +391,6 @@
       opacity: 1;
     }
 
-    /* Barra de rolagem personalizada */
     .consultants-list-container::-webkit-scrollbar {
       width: 6px;
     }

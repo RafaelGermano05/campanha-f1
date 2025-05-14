@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
       });
       
-      // Efeito hover nos cards de equipe
       const teamCards = document.querySelectorAll('.team-card');
       
       teamCards.forEach(card => {
